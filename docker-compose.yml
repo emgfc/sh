@@ -3,6 +3,7 @@ version: '3.7'
 services:
   web:
     build: .
+    working_dir: /usr/src/sh-www/sh/
     command: python main.py
     volumes:
       - .:/usr/src/sh-www/

@@ -3,6 +3,7 @@ version: '3.7'
 services:
   web:
     build: .
+    working_dir: /usr/src/sh-www/sh/
     command: gunicorn --bind 0.0.0.0:5001 manage:app
     ports:
       - 5001:5001

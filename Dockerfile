@@ -8,9 +8,9 @@ ENV PYTHONUNBUFFERED 1
 RUN apt-get update && apt-get install -y netcat
 
 RUN pip install --upgrade pip
-COPY ./requirements.txt /usr/src/sh-www/requirements.txt
+COPY ./sh/requirements.txt /usr/src/sh-www/requirements.txt
 RUN pip install -r requirements.txt
 
-COPY . /usr/src/sh-www/
+COPY . /usr/src/sh-www
 
 ENTRYPOINT ["/usr/src/sh-www/entrypoint.sh"]
