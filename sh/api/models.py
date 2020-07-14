@@ -10,20 +10,20 @@ class Link(db.Model):
     __tablename__ = 'links'
 
     id = db.Column(db.Integer, primary_key=True)
-    
+
     # source link value
     src = db.Column(db.String(2084), nullable=False)
-    
+
     # shortened link alias
     short = db.Column(db.String(10), nullable=False, unique=True, index=True)
-    
+
     # true if link is a one-off self-disposable one
     is_one_off = db.Column(db.Boolean, nullable=False, default=False)
-    
+
     # creation timestamp
     created_at = db.Column(db.DateTime, nullable=False,
                            default=datetime.utcnow)
-    
+
     # deletion timestamp. If not set, a link is active.
     deleted_at = db.Column(db.DateTime, nullable=True)
 
