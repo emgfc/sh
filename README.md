@@ -14,7 +14,7 @@
 	"is_one_off": false,
 	"expiring": true,
 	"short": "aaabbcc",
-	"deleted_at": 2036-10-07T01:02:03.265042
+	"deleted_at": "2036-10-07T01:02:03.265042"
 }
 ```
 
