@@ -11,7 +11,7 @@ then
     echo "Postgres started"
 fi
 
-if [ $FLASK_ENV = "development" ]
+if [ "$FLASK_ENV" = "development" ]
 then
   echo "Creating database schema"
   python manage.py create_db
